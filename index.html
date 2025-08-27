@@ -1,24 +1,242 @@
-<!-- 
-HTML Template for Missions, delete and replace with mission HTML
--->
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="style.css" />
-  <title>Gnius Club</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Playbook Sesión 3: Vibe Coding: El Diálogo con tu Socio de IA</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
-
 <body>
-  <h1>
-    Playbook HTML Placeholder Template
-  </h1>
-  <p>
-    Replace with actual playbook code.
-  </p>
-  <script src="script.js"></script>
-</body>
 
+    <header>
+        <h1><span class="book-icon">📋</span> <strong>Playbook Sesión 3: Vibe Coding: El Diálogo con tu Socio de IA</strong></h1>
+        <div class="header-widgets">
+            <div class="timer-container">
+                <span id="timer">⏱️ 00:00</span>
+                <button id="startStop">Start</button>
+                <button id="reset">Reset</button>
+            </div>
+            <div class="theme-toggle">
+                <i class="fas fa-sun"></i>
+                <label class="switch">
+                    <input type="checkbox" id="theme-toggle-input">
+                    <span class="slider round"></span>
+                </label>
+                <i class="fas fa-moon"></i>
+            </div>
+        </div>
+    </header>
+
+    <div class="main-container">
+        <aside class="activity-list">
+            <h2>Actividades</h2>
+            <ul>
+                <li><a href="#activity-0">📝</a></li>
+                <li><a href="#activity-1">1</a></li>
+                <li><a href="#activity-2">2</a></li>
+                <li><a href="#activity-3">3</a></li>
+            </ul>
+
+            <div class="sidebar-info">
+                <p>💡 Cada actividad está cuidadosamente diseñada para involucrar a los estudiantes.</p>
+                <p>⏱️ Se proporcionan estimaciones de tiempo para cada actividad para ayudarle a mantener el rumbo.</p>
+            </div>
+        </aside>
+
+        <main class="content">
+            <div class="progress-bar">
+                <div class="progress"></div>
+            </div>
+
+            <button id="toggle-dialogues">Mostrar todos los diálogos</button>
+
+            <!-- SECCIÓN "DE UN VISTAZO" (ANTES ACTIVITY-0) -->
+            <div class="activity-card" id="activity-0">
+                <h2><span class="book-icon">📝</span> De un Vistazo: Resumen para el Facilitador</h2>
+                <p class="overview-subtitle">Resumen rápido de objetivos, materiales y preparación para el facilitador.</p>
+                <div class="overview-table-container">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th style="width: 50%;">Objetivos, Tácticas y Entregable</th>
+                                <th style="width: 50%;">Materiales Específicos y Preparación Previa</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <strong>Objetivos de Aprendizaje:</strong>
+                                    <ul>
+                                        <li><strong>Conceptual:</strong> El estudiante internalizará el nuevo modelo de colaboración: él es el <strong>Director de Proyecto</strong> y Xolo es su <strong>Socio Técnico</strong>. Comprenderá las fases del "Flujo de Creación Aumentada por IA", especialmente la importancia del análisis de código y el debugging colaborativo.</li>
+                                        <li><strong>Técnico:</strong> El estudiante aprenderá a formular un "vibe" (una intención de proyecto) de manera clara y conceptual para que Xolo pueda generar un esqueleto de código funcional.</li>
+                                        <li><strong>Práctico:</strong> El estudiante completará su primer ciclo de Vibe Coding avanzado: interactuará con Xolo para aprender el proceso, le pedirá que genere un código simple, lo analizará con la guía de Xolo y lo implementará exitosamente en un Micro:bit.</li>
+                                    </ul>
+                                    <strong>Secuencia de la Sesión:</strong>
+                                    <ul>
+                                        <li><strong class="tactic-highlight">⚡Las Nuevas Reglas del Juego: El Vibe Coding Avanzado:</strong> (10 min)</li>
+                                        <li><strong class="tactic-highlight">⚡Aprendiendo del Experto: Tu Primera Interacción con Xolo:</strong> (10 min)</li>
+                                        <li><strong class="tactic-highlight">⚡Gnius Storm: Tu Primera Co-Creación:</strong> (20 min)</li>
+                                    </ul>
+                                    <strong>Entregable Clave:</strong>
+                                    <ul>
+                                        <li>Un programa funcional en MicroPython en un Micro:bit que hace parpadear un LED, creado y analizado siguiendo la nueva metodología de colaboración con Xolo.</li>
+                                    </ul>
+                                </td>
+                                <td>
+                                    <strong>Materiales Específicos:</strong>
+                                    <ul>
+                                        <li>Proyector o pantalla interactiva.</li>
+                                        <li>Dispositivos individuales con acceso a Gnius Space.</li>
+                                        <li>Hardware: 1 Micro:bit y cable USB por estudiante o por pareja.</li>
+                                        <li>Software: Acceso a un editor de código para MicroPython (como el editor online de `python.microbit.org`).</li>
+                                        <li>Presentación de diapositivas para la sesión.</li>
+                                    </ul>
+                                    <strong>Preparación Previa del Facilitador:</strong>
+                                    <ol>
+                                        <li><strong>Dominio de la Metodología:</strong> Lee y comprende a fondo el documento "Guía de Metodología AI-First para Secundaria 3º". Debes ser el experto en este flujo.</li>
+                                        <li><strong>Prueba el Flujo:</strong> Realiza el ejercicio completo de la sesión tú mismo: Pídele a Xolo que te explique el proceso, luego dale el "vibe" del LED parpadeante, analiza el código que genera y cárgalo en un Micro:bit para asegurarte de que funciona. Anticipa posibles preguntas.</li>
+                                        <li><strong>Hardware Listo:</strong> Confirma que todos los Micro:bits funcionan y los cables USB son de datos (no solo de carga).</li>
+                                    </ol>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <!-- FIN DE LA SECCIÓN "DE UN VISTAZO" -->
+
+            <div class="activity-card" id="activity-1">
+                <h2>⚡ Actividad 1: Las Nuevas Reglas del Juego: Vibe Coding Avanzado ⏰ 10 minutos</h2>
+                <p>El objetivo es establecer un antes y un después. Los estudiantes deben entender que las reglas y las expectativas han cambiado. Ya no se trata de recibir instrucciones, sino de dirigir un proceso.</p>
+                <div class="steps">
+                    <div class="step-card">
+                        <div class="step-content">
+                            <h3>Paso 1: El Cambio de Rol ⏰ 5 minutos</h3>
+                            <p>(Proyectar Diapositiva con el título "De Aprendiz a Director de Proyecto")</p>
+                        </div>
+                        <div class="collapsible">
+                            <button type="button" class="collapsible-button">Diálogo Sugerido</button>
+                            <div class="collapsible-content">
+                                <p class="dialogue assistant">Muy bien, equipo. Hasta ahora, han aprendido las bases de la programación y la tecnología. Hoy, damos un salto fundamental. Ya no son simplemente estudiantes siguiendo un tutorial. A partir de esta sesión, su rol cambia: se convierten en <strong>Directores de Proyecto</strong>. ¿Qué significa eso? Significa que ustedes son los responsables de la visión, de la idea, de la estrategia. Son quienes toman las decisiones.</p>
+                                <p class="dialogue assistant">Y como todo buen director, no trabajan solos. Necesitan un equipo técnico experto. Ese es el nuevo rol de Xolo. Ya no es un tutor que les enseña paso a paso. Ahora, Xolo es su <strong>Socio Técnico y Conceptual</strong>. Es su ingeniero de software, su consultor, su experto en IA. Ustedes le describen el 'qué' y el 'porqué', y él les ayuda a construir el 'cómo'. Esta colaboración es el núcleo de lo que llamamos Vibe Coding Avanzado.</p>
+                            </div>
+                        </div>
+                    </div>
+                      <div class="step-card">
+                        <div class="step-content">
+                            <h3>Paso 2: Presentación del Flujo de Creación Aumentada ⏰ 5 minutos</h3>
+                            <p>(Proyectar Diapositiva con un diagrama visual de las fases: 1. A.I. GYM -> 2. VIBE CODING -> 3. ANÁLISIS DE CÓDIGO -> 4. DEBUGGING -> 5. GNIUS STORM)</p>
+                        </div>
+                        <div class="collapsible">
+                            <button type="button" class="collapsible-button">Diálogo Sugerido</button>
+                            <div class="collapsible-content">
+                                <p class="dialogue assistant">Este nuevo modelo de trabajo sigue un flujo estructurado en cada misión. Es nuestro 'Flujo de Creación Aumentada por IA'. Primero, en el <strong>A.I. GYM</strong>, Xolo y ustedes discutirán los conceptos clave, no como una clase, sino como una sesión de estrategia. Luego, en <strong>VIBE CODING</strong>, ustedes le comunicarán su visión, su 'vibe', y Xolo generará el código base para materializarla.</p>
+                                <p class="dialogue assistant">Y aquí viene el cambio más importante: la <strong>Fase 3, Análisis de Código</strong>. Copiar y pegar el código de Xolo sin entenderlo está prohibido. Su trabajo como directores es leer, analizar y comprender el código que su socio técnico les entrega. Deben entender la lógica, el flujo de datos. Esto no es negociable. La fase 4 es el <strong>Debugging Colaborativo</strong>, donde si algo falla, no solo lo intentan arreglar, sino que discuten el problema con Xolo como lo harían con un colega. Finalmente, el <strong>Gnius Storm</strong> es para compartir no solo el resultado, sino el proceso: qué decisiones tomaron y qué aprendieron al colaborar con la IA. ¿Listos para probarlo?</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="activity-card" id="activity-2">
+                <h2>⚡ Actividad 2: Aprendiendo del Experto: Tu Primera Interacción con Xolo ⏰ 10 minutos</h2>
+                <p>La mejor forma de aprender el nuevo proceso es que la propia IA lo explique. Esta actividad meta-cognitiva empodera al estudiante y establece desde el inicio la dinámica de diálogo y consulta.</p>
+                <div class="steps">
+                    <div class="step-card">
+                        <div class="step-content">
+                            <h3>Paso 1: La Pregunta Estratégica ⏰ 8 minutos</h3>
+                            <p>(Proyectar el prompt en pantalla de forma clara y grande)</p>
+                        </div>
+                        <div class="collapsible">
+                            <button type="button" class="collapsible-button">Diálogo Sugerido</button>
+                            <div class="collapsible-content">
+                                <p class="dialogue assistant">Perfecto. Para nuestra primera interacción bajo este nuevo modelo, vamos a hacer algo fundamental: le preguntaremos a nuestro socio técnico cómo trabajar con él. No hay mejor manera de entender las reglas que preguntándole a la fuente. Quiero que abran el chat con Xolo en Gnius Space y escriban, palabra por palabra, el siguiente prompt. Esto asegurará que todos recibamos la misma base de conocimiento.</p>
+                                <p class="dialogue assistant"><strong>Prompt para Xolo:</strong> `Xolo, a partir de hoy, mi rol es 'Director de Proyecto' y el tuyo es mi 'Socio Técnico'. Basado en la metodología de 'Flujo de Creación Aumentada por IA', explícame en 4 puntos clave cómo debo interactuar contigo para que nuestra colaboración sea efectiva, especialmente en las fases de Vibe Coding y Análisis de Código.`</p>
+                                <p class="dialogue assistant">Tómense unos minutos para leer y analizar la respuesta que les da. Pongan especial atención a cómo describe lo que espera de ustedes y lo que pueden esperar de él.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="step-card">
+                        <div class="step-content">
+                            <h3>Paso 2: Análisis Colectivo de la Respuesta ⏰ 2 minutos</h3>
+                            <p>Discutir y consolidar el entendimiento del proceso descrito por Xolo.</p>
+                        </div>
+                        <div class="collapsible">
+                            <button type="button" class="collapsible-button">Diálogo Sugerido</button>
+                            <div class="collapsible-content">
+                                <p class="dialogue assistant">Okay, ahora que todos leyeron su respuesta, discutamos rápidamente. ¿Cuál es la idea principal del punto sobre 'Vibe Coding'? ¿Qué les pide Xolo que hagan? (Respuesta esperada: describir la idea, no el código). Y sobre el 'Análisis de Código', ¿cuál es su rol? (Respuesta esperada: leer, entender, preguntar sobre el código generado). Excelente. Ahora que conocemos la teoría, vamos a la práctica.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="activity-card" id="activity-3">
+                 <h2>⚡ Actividad 3: Gnius Storm: Tu Primera Co-Creación ⏰ 20 minutos</h2>
+                <p>Un ejercicio simple y de bajo riesgo para practicar el ciclo completo. El objetivo no es la complejidad del producto final, sino la correcta ejecución del *proceso*.</p>
+                <div class="steps">
+                    <div class="step-card">
+                        <div class="step-content">
+                            <h3>Paso 1: A.I. GYM - El Contexto ⏰ 2 minutos</h3>
+                            <p>Establecer el contexto técnico inicial con una consulta rápida a Xolo.</p>
+                        </div>
+                        <div class="collapsible">
+                            <button type="button" class="collapsible-button">Diálogo Sugerido</button>
+                            <div class="collapsible-content">
+                                <p class="dialogue assistant">Vamos a nuestro primer ciclo. El objetivo es simple: queremos usar MicroPython para hacer que el LED principal del Micro:bit parpadee. Antes de empezar, una pregunta rápida para Xolo para entrar en contexto. Pregúntenle: `Xolo, ¿cuál es el comando básico en MicroPython para encender un LED en el Micro:bit?` No necesitamos el código completo, solo el concepto. Él les hablará de la librería `microbit` y de `display.set_pixel()`.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="step-card">
+                        <div class="step-content">
+                            <h3>Paso 2: VIBE CODING - Definiendo la Intención ⏰ 4 minutos</h3>
+                            <p>(Proyectar el prompt de "vibe" en pantalla)</p>
+                        </div>
+                        <div class="collapsible">
+                            <button type="button" class="collapsible-button">Diálogo Sugerido</button>
+                            <div class="collapsible-content">
+                                 <p class="dialogue assistant">Ahora que tenemos el contexto, vamos a darle nuestro 'vibe'. Recuerden, somos directores. No le decimos 'escribe un bucle y pon un sleep'. Le describimos el comportamiento deseado. Escriban esto a Xolo:</p>
+                                 <p class="dialogue assistant"><strong>Prompt de Vibe:</strong> `Xolo, usando MicroPython, necesito un programa para el Micro:bit. Mi vibe es que el LED central de la pantalla parpadee de forma continua. Debe estar encendido durante medio segundo y luego apagado durante medio segundo, y que este ciclo se repita para siempre.`</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="step-card">
+                        <div class="step-content">
+                            <h3>Paso 3: ANÁLISIS DE CÓDIGO - Entendiendo la Solución ⏰ 8 minutos</h3>
+                            <p>(Proyectar las preguntas de análisis en pantalla)</p>
+                        </div>
+                        <div class="collapsible">
+                            <button type="button" class="collapsible-button">Diálogo Sugerido</button>
+                            <div class="collapsible-content">
+                                <p class="dialogue assistant">Xolo ahora les habrá generado un bloque de código. <strong>NO LO COPIEN TODAVÍA.</strong> Nuestra fase más importante es ahora. Miren el código que les dio. Como su socio técnico, Xolo ahora les ayudará a analizarlo. Respondan estas preguntas ustedes mismos leyendo el código, y si tienen dudas, pregúntenle directamente a él:</p>
+                                <p class="dialogue assistant"><strong>1. ¿Qué hace la línea `from microbit import *`? ¿Por qué es crucial?</strong><br>
+                                <strong>2. ¿Qué significa `while True:`? ¿Cómo se relaciona eso con mi 'vibe' de 'para siempre'?</strong><br>
+                                <strong>3. ¿Qué comando específico en el código enciende el LED? ¿Y cuál lo apaga? Fíjense en los parámetros.</strong><br>
+                                <strong>4. ¿Qué hace la línea `sleep(500)`? ¿Por qué el número es 500 y no 0.5?</strong></p>
+                                <p class="dialogue assistant">Tienen 6 minutos para leer el código y tratar de responder a esas preguntas. Si no entienden algo, por ejemplo `while True:`, pregúntenle a Xolo: `Xolo, en el código que me diste, ¿puedes explicarme qué hace exactamente el bucle 'while True:'?`. Este es el núcleo del aprendizaje.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="step-card">
+                        <div class="step-content">
+                            <h3>Paso 4: Implementación y Prueba ⏰ 6 minutos</h3>
+                            <p>Implementar el código en el hardware y practicar el debugging colaborativo.</p>
+                        </div>
+                        <div class="collapsible">
+                            <button type="button" class="collapsible-button">Diálogo Sugerido</button>
+                            <div class="collapsible-content">
+                                <p class="dialogue assistant">Una vez que hayan analizado y comprendido el código, es hora de la implementación. Abran el editor de MicroPython, copien el código de Xolo, conecten su Micro:bit y usen el botón 'Flash' para enviarlo al dispositivo. Si todo sale bien, deberían ver el LED parpadeando.</p>
+                                <p class="dialogue assistant">Si obtienen un error, ¡felicidades! Han encontrado su primera oportunidad para un <strong>debugging colaborativo</strong>. Copien el mensaje de error completo, pégenselo a Xolo junto con su código y pregúntenle: `Xolo, estoy obteniendo este error. ¿Qué podría estar causándolo?` Analicen su sugerencia y traten de arreglarlo. Esto es ser un desarrollador. ¡Adelante!</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
 </html>
